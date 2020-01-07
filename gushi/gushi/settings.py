@@ -19,7 +19,10 @@ NEWSPIDER_MODULE = 'gushi.spiders'
 #USER_AGENT = 'gushi (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
+
+# 输出编码
+FEED_EXPORT_ENCODING='UTF-8'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32

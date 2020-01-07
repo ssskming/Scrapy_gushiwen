@@ -11,4 +11,9 @@ import scrapy
 class GushiItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    name = scrapy.Field()
+    dynasty = scrapy.Field()
+    author = scrapy.Field()
+    poetry = scrapy.Field()
+    label = scrapy.Field()
+    

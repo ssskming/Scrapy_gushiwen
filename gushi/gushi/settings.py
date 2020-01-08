@@ -67,9 +67,9 @@ FEED_EXPORT_ENCODING='UTF-8'
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'gushi.pipelines.GushiPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'gushi.pipelines.GushiPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -91,3 +91,18 @@ FEED_EXPORT_ENCODING='UTF-8'
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+DEFAULT_REQUEST_HEADERS = {
+  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'Accept-Language': 'en',
+  'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+}
+
+DB = {  #key务必大写
+'host': '62.234.148.85',
+'port': 3306,
+'user' : 'root',
+'password' : '123456',
+'database' : 'gushiwen',
+'charset' : 'utf8'
+}

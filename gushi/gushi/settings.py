@@ -8,6 +8,7 @@
 #     https://doc.scrapy.org/en/latest/topics/settings.html
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
+import datetime
 
 BOT_NAME = 'gushi'
 
@@ -98,11 +99,20 @@ DEFAULT_REQUEST_HEADERS = {
   'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
 }
 
-DB = {  #key务必大写
-'host': '62.234.148.85',
-'port': 3306,
-'user' : 'root',
-'password' : '123456',
-'database' : 'gushiwen',
-'charset' : 'utf8'
-}
+# start MySQL database configure setting
+MYSQL_HOST = "62.234.148.85"
+MYSQL_PORT = 3306
+MYSQL_DATABASE = "gushiwen"
+MYSQL_USER = "root"
+MYSQL_PASSWORD = "root"
+MYSQL_CHARSET = "utf8"
+# end of MySQL database configure setting
+
+# start logger configure setting
+current_day = datetime.datetime.now()
+LOG_ENABLED = True  # 启用日志，默认不启用
+LOG_ENCODING = 'utf-8'
+LOG_FILE = "D://gushiwen_spider.{}-{}-{}.log".format(current_day.year, current_day.month, current_day.day)
+LOG_LEVEL = "INFO"
+LOG_STDOUT = True  # 输出重定向至log日志，比如print
+# end logger configure setting
